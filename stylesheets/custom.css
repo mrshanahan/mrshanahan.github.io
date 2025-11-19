@@ -50,7 +50,7 @@ div.tab-content-container .tab-content {
 div#tab-content-resume.selected-tab-content {
     display: flex;
     justify-content: center;
-    height: 500px;
+    height: 900px;
     width: 100%;
 }
 
