@@ -19,8 +19,8 @@ div.tab-container .tab {
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    width: 130px;
-    height: 40px;
+    width: 150px;
+    height: 45px;
     margin-left: 0.2em;
     margin-right: 0.2em;
     background-color: var(--tab-color-unselected);
