@@ -1,0 +1,69 @@
+.elm {
+    max-width: 640px;
+    display: flex;
+    flex-direction: row;
+    font-family: Arial;
+}
+
+.board {
+    text-align: center;
+}
+
+.board svg {
+    width: 300px;
+    height: 300px;
+}
+
+.sidebar {
+    text-align: left;
+    margin-left: 0.2em;
+    font-size: 0.8em;
+    width: 300px;
+}
+
+.sidebar-section {
+    margin-bottom: 1em;
+}
+
+.state, .state-key, .state-value {
+    border: 1px solid;
+    width: 100%;
+}
+
+.state-key {
+    width: 80%;
+}
+
+.state-value {
+    text-align: right;
+    width: 20%;
+    background-color: lightblue;
+}
+
+#turn-indicator {
+    font-size: 2em;
+}
+
+#reset-button {
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    height: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.log textarea {
+    font-family: monospace;
+    font-size: 1em;
+    width: 300px;
+}
+
+/* This allows us to have horizontally-separated subsections
+ * while keeping the margins sane.
+ * https://stackoverflow.com/questions/8184958/add-space-between-html-elements-only-using-css
+ */
+/*.elm .board + .state {
+    margin-left: 0.5em;
+}*/

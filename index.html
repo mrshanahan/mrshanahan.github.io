@@ -1,58 +1,115 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="mrshanahan.github.io : Matt Shanahan&#39;s decidedly unexciting Github page. Woooo.">
+    <meta name="description"
+        content="mrshanahan.github.io : Matt Shanahan&#39;s decidedly unexciting Github page. Woooo.">
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/custom.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/elm.css">
+
+    <script type="text/javascript" src="javascripts/main.js"></script>
 
     <title>Matt Shanahan & Sons Bespoke Snake Pits</title>
-  </head>
+</head>
 
-  <body>
-
+<body>
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/mrshanahan">View on GitHub</a>
+            <a id="forkme_banner" href="https://github.com/mrshanahan">View on GitHub</a>
 
-          <h1 id="project_title">mrshanahan.github.io</h1>
-          <h2 id="project_tagline">Matt Shanahan&#39;s decidedly unexciting Github page. Woooo.</h2>
+            <h1 id="project_title">mrshanahan.github.io</h1>
+            <h2 id="project_tagline">Matt Shanahan&#39;s decidedly unexciting Github page. Woooo.</h2>
 
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h2>
-<a id="sup-nerds" class="anchor" href="#sup-nerds" aria-hidden="true"><span class="octicon octicon-link"></span></a>'Sup, nerds.</h2>
+        <section id="main_content" class="inner">
+            <h2><a id="sup-nerds" class="anchor" href="#sup-nerds" aria-hidden="true"><span
+                        class="octicon octicon-link"></span></a>'Sup nerds</h2>
 
-<p>There's not much here at the moment, but feel free to check out any of my repos full of embarrassingly terrible Python code I wrote in college. Hopefully there will be more interesting stuff here and there later as I start on a few projects.</p>
+            <p>Much of my day-to-day work is in private orgs in GitHub so you can't see much of it here, but I do have a few random things you could check out:</p>
 
-<h3><a href="/NCAAQuest.swf">NCAA Quest</a></h3>
-<p>A cool Flash game made by Alex Dunlap (BroStoMP) for UChicago Scav 2015. It entranced all the RH children/grown-ass adults. It's ~71MB, so open on your data network at your own risk.</p>
+            <div class="tab-container">
+                <div class="tab" id="tab-resume" onclick="selectTab(event.target.id)">Resume</div>
+                <div class="tab" id="tab-repositories" onclick="selectTab(event.target.id)">Repositories</div>
+                <div class="tab" id="tab-guerilla-checkers" onclick="selectTab(event.target.id)">Guerilla Checkers</div>
+            </div>
+            <div class="tab-content-container">
+                <div class="tab-content" id="tab-content-resume">
+                    <embed src="files/resume.pdf" width="800px"/>
+                </div>
+                <div class="tab-content" id="tab-content-repositories">
+                    <h3>Notes</h3>
+                    <p>A collection of web services & UIs with the intent to eventually serve as a personal zettelkasten of sorts.</p>
+                    <table class="repository-table">
+                        <tr>
+                            <td><code><a href="https://github.com/mrshanahan/notes-service">notes-service</a></code></td>
+                            <td>The "composition root" for the various services used to host the application. A weird little Docker Compose-based deployment. Maybe just use a hosted solution kids.</td>
+                        </tr>
+                        <tr>
+                            <td><code><a href="https://github.com/mrshanahan/notes-api">notes-api</a></code></td>
+                            <td>Golang-based HTTP-JSON API &amp; database serving as the foundation of the application.</td>
+                        </tr>
+                        <tr>
+                            <td><code><a href="https://github.com/mrshanahan/notes-web">notes-web</a></code></td>
+                            <td>Browser frontend for the application.</td>
+                        </tr>
+                        <tr>
+                            <td><code><a href="https://github.com/mrshanahan/notes-term">notes-term</a></code></td>
+                            <td>Golang-based terminal frontend for the application.</td>
+                        </tr>
+                        <tr>
+                            <td><code><a href="https://github.com/mrshanahan/notes-indexer">notes-indexer</a></code></td>
+                            <td><i>(very much work-in-progress)</i> Golang-based library containing initial code for a customer indexer on notes plus Markdown parsing for the web application.</td>
+                        </tr>
+                        <tr>
+                            <td><code><a href="https://github.com/mrshanahan/deploy-assets">deploy-assets</a></code></td>
+                            <td>Golang-based utility for deploying certain typed resources based on a manifest file. Includes deploying local Docker images (which was the primary motivation for it).</td>
+                        </tr>
+                    </table>
 
-<h3><a href="/OneDirection.apk">One Direction Compass App</a></h3>
-<p>Android app to power Scav 2017 item #5.</p>
-        
-<h3><a href="/LiveFreeOrScavHard.apk">LIVE FREE OR SCAV HARD</a></h3>
-<p>Android app to power Scav 2017 item #158. BYO tat. (Install an NFC reader if you wanna use it.)</p>
-      </section>
+                    <h3>Guerilla Checkers (<code><a href="https://github.com/mrshanahan/guerilla-checkers">guerilla-checkers</a></code>)</h3>
+                    <p>An Elm implementation of a game developed by Brian Train.</p>
+                    <p><i>For a no-AI, just-play-against-yourself version, see the <a href="#tab-guerilla-checkers">relevant tab</a>.</i></p>
 
+                    <h3>UChicago Scav projects</h3>
+                    <p>Small projects (some built by me, some just hosted here) built in the service of the Great Game.</p>
+
+                    <h4><a href="/NCAAQuest.swf">NCAA Quest</a></h4>
+                    <p>A cool Flash game made by Alex Dunlap (BroStoMP) for UChicago Scav 2015. It entranced all the RH
+                        children/grown-ass adults. It's ~71MB, so open on your data network at your own risk.</p>
+
+                    <h4><a href="/OneDirection.apk">One Direction Compass App</a></h4>
+                    <p>Android app to power Scav 2017 item #5.</p>
+
+                    <h4><a href="/LiveFreeOrScavHard.apk">LIVE FREE OR SCAV HARD</a></h4>
+                    <p>Android app to power Scav 2017 item #158. BYO tat. (Install an NFC reader if you wanna use it.)</p>
+                </div>
+                <div class="tab-content" id="tab-content-guerilla-checkers">
+                    <script type="text/javascript" src="javascripts/elm.js"></script>
+                    <div id="elm-node"></div>
+                    <script>
+                        Elm.GuerillaCheckers.init({ node: document.getElementById("elm-node") });
+                    </script>
+                </div>
+            </div>
+
+        </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
+        <footer class="inner">
+            <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        </footer>
     </div>
-
-    
-
-  </body>
+</body>
 </html>

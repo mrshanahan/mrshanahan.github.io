@@ -1,1 +1,7 @@
-{"name":"mrshanahan.github.io","tagline":"Matt Shanahan's decidedly unexciting Github page. Woooo.","body":"### 'Sup, nerds.\r\nThere's nothing here at the moment, but feel free to check out any of my repos full of embarrassingly terrible Python code I wrote in college. Hopefully there will be more interesting stuff here and there later as I start on a few projects.","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
+{
+    "name":"mrshanahan.github.io",
+    "tagline":"Matt Shanahan's decidedly unexciting Github page. Woooo.",
+    "body":"### 'Sup, nerds.\r\nThere's nothing here at the moment, but feel free to check out any of my repos full of embarrassingly terrible Python code I wrote in college. Hopefully there will be more interesting stuff here and there later as I start on a few projects.",
+    "google":"",
+    "note":"Don't delete this file! It's used internally to help with page regeneration."
+}
