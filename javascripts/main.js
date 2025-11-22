@@ -27,6 +27,20 @@ function selectTab(id) {
     }
 }
 
+const descriptions = [
+    'Si quaeris paginam amoenam, circumspice',
+    'Bits, bytes, and nibbles',
+    'Lock-free since \'93',
+    'Like AGI: painfully self-aware',
+    'Software architecture in the Brutalist style',
+    'Consolas? Are you fucking kidding me?'
+]
+
+function randomDescription() {
+    var idx = Math.floor(Math.random() * descriptions.length)
+    return descriptions[idx]
+}
+
 window.onload = () => {
     const allTabs = document.getElementsByClassName('tab');
     if (!allTabs) {
@@ -34,4 +48,6 @@ window.onload = () => {
     } else {
         selectTab(allTabs[0].id)
     }
+
+    document.getElementById('project_tagline').innerText = randomDescription()
 }
